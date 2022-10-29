@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.metronome {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(32, 32, 32);
+    color: rgb(245, 199, 147);
+    font-family: 'Open Sans',serif;
+}
+.container {
+    margin: 25px 50px;
+    display: flex;
+    justify-content: center;
+}
+.metronome-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(95, 95, 95);
+    width: 50%;
+    border: 2px solid rgb(245, 199, 147);
+}
+.main_header {
+    margin: 15px 0;
+}
+.beats {
+    font-size: 25px;
+}
+.beats-circles__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+}
+.beat-circle {
+    border: 1px solid #ccc;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #c1c1c1;
+    margin: 40px 1rem;
+}
+.range, .measures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.bpm-status {
+    margin: 20px 0;
+}
+.btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2.2rem;
+}
+.btn:hover {
+    background-color: rgb(245, 199, 147);
+    border-color: rgb(245, 199, 147);
+}
+.bpm-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 400px;
+    margin: 0 1rem;
+    background-color: rgb(95, 95, 95);
+}
+.bpm-input:focus {
+    outline: none;
+}
+.bpm-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #2c2c2c;
+    margin-top: -10px;
+}
+.bpm-input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    background-color:#ccc;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.bpm-status{ 
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+.btn-start {
+    margin: 15px;
+    padding: 10px 45px;
+    font-size: 1.1rem;  
+}
+.btn_text {
+    position: relative;
+}
+.btn_text:after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid #000;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+.btn_text:hover:after {
+    width: 100%;    
+}
+.measure-count {
+    font-size: 1.5rem;
+    margin: 0 15px;
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+}
+.minus{
+    position: relative;
+    top: -3px;
+}
+@media (max-width: 1350px) {
+    .beats-circles__list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .beat-circle{
+        margin: 20px 1rem;
+    }
+}
+@media (max-width: 1200px){
+    .beats-circles__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .beat-circle{
+        margin: 20px 2rem;
+    }
+    .metronome-inner{
+        width: 65%;
+    }
+}
+@media (max-width: 900px){
+    .metronome-inner{
+        width: 80%;
+    }
+}
+@media (max-width: 750px){
+    .container{
+        margin: 0;
+    }
+    .metronome-inner{
+        width: 90%;
+    }
+    .beat-circle{
+        margin: 20px 3rem;
+    }
+}
+@media (max-width: 600px){
+    .bpm-input{
+        width: 250px;
+    }
+    .beat-circle{
+        margin: 20px 2rem;
+    }
+}
+@media (max-width: 450px){
+    .bpm-input{
+        width: 180px;
+    }
+}
+@media (max-width: 350px){
+    .beat-circle{
+        margin: 20px 1rem;
+    }
+    .range{
+        flex-wrap: wrap;
+    }
+    .bpm-input{
+        order: 0;
+        display: inline-block;
+        width: 100%;
+        margin: 25px 0;
+    }
+    .btn-minus{
+        order: 1;
+        margin: 0 auto;
+    }
+    .btn-plus{
+        order: 2;
+        margin: 0 auto;
+    }
+}
+
+/* Some css for Firefox*/
+.bpm-input::-moz-range-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #2c2c2c;
+    margin-top: -10px;
+}
+
+.bpm-input::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    background-color:#ccc;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@-moz-document url-prefix() {
+    .minus{
+        top: -4px;
+    }
+    .plus{  
+        position: relative;
+        top: -5px;
+    }
+  }

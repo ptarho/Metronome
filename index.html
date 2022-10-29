@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Metronome</title>
+</head>
+<body>
+    <div class="metronome">
+        <div class="container">
+            <div class="metronome-inner">
+                <h1 class="main_header">Metronome</h1>
+
+                <div class="beats">--</div>
+                <div class="beats-circles">
+                    <ul class="beats-circles__list">
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                        <li class="beat-circle"></li>
+                    </ul>
+                </div>
+
+                <div class="range">
+                    <button class="btn-minus btn">
+                       <span class="minus"> - </span> 
+                    </button>
+
+                    <input class="bpm-input" type="range" min="20" max="280" value="140">
+
+                    <button class="btn-plus btn">
+                        <span class="plus"> + </span>
+                    </button>
+                </div>
+
+                <div class="bpm-status">
+                    <span class="bpm-number">140</span> BPM
+                </div>
+                <div class="tempo">
+
+                </div>
+                <div class="start">
+                    <button class="btn-start"><span class="btn_text">START</span> </button>
+                </div>
+                <div class="measures">
+                    <button class="decrease-beats btn">
+                        <span class="minus"> - </span>
+                    </button>
+                    <span class="measure-count">4</span>
+                    <button class="increase-beats btn">
+                        <span class="plus"> + </span>
+                    </button>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <script src="timer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
