@@ -1,5 +1,6 @@
 # Metronome
 #### Description: Implementation of metronome using HTML/CSS/JS
+#### To check out the project follow the link: https://ptarho.github.io/Metronome/
 
 ### What is metronome?  
 It is a device that produces a click at a regular interval of time. It used by musicians as a practice tool to make sure they are playing at a steady tempo.
